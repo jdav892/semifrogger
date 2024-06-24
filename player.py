@@ -10,4 +10,9 @@ class Player(Turtle):
         super().__init__()
         self.shape("turtle")
         self.penup()
-        self.goto(0, -290)
+        self.left(90)
+        self.goto(0, -280)
+        
+    def move(self):
+        new_y = self.ycor() + 15
+        self.goto(self.xcor(), new_y)
